@@ -1,0 +1,25 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import SwiftUI
+
+struct {{ module_info.name }}View: View {
+
+    @EnvironmentObject var store: AppStore
+
+    var body: some View {
+        Button(store.state.{{ module_info.name | slice: 0, 1 | downcase }}{{ module_info.name | slice: 1, module_info.name.size }}.message) {
+            store.dispatch(.{{ module_info.name | slice: 0, 1 | downcase }}{{ module_info.name | slice: 1, module_info.name.size }}(action: .someAction))
+        }
+    }
+
+}
+
+#Preview {
+    {{ module_info.name }}View()
+}

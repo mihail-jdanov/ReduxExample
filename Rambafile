@@ -1,0 +1,20 @@
+### Headers settings
+company: EPS
+
+### Xcode project settings
+project_name: ReduxExample
+xcodeproj_path: ReduxExample.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: ReduxExample
+
+# The file path for new modules
+project_file_path: ReduxExample/Redux/Modules
+
+# The Xcode group path to new modules
+project_group_path: ReduxExample/Redux/Modules
+
+### Templates
+templates:
+- {name: redux}

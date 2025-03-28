@@ -1,0 +1,16 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+func {{ module_info.name | slice: 0, 1 | downcase }}{{ module_info.name | slice: 1, module_info.name.size }}Reducer(state: inout {{ module_info.name }}State, action: {{ module_info.name }}Action) {
+    switch action {
+    case .someAction:
+        state.message = "Changed state"
+    }
+}
